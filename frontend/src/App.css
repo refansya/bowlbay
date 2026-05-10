@@ -338,6 +338,18 @@ tr:hover td { background: var(--surface2); }
     word-break: break-all;
   }
 
+    .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .payment-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: static !important;
+  }
+
 @media (max-width: 480px) {
   .stat-grid { grid-template-columns: 1fr !important; }
 }
