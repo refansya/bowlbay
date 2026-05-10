@@ -307,6 +307,26 @@ tr:hover td { background: var(--surface2); }
   .stat-value { font-size: 18px; }
 }
 
+  .page {
+    padding: 12px;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* FIX FLEX-BETWEEN jangan overflow */
+  .flex-between {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Jam di kasir jangan overflow */
+  .mono {
+    word-break: break-all;
+  }
+
 @media (max-width: 480px) {
   .stat-grid { grid-template-columns: 1fr !important; }
 }
