@@ -285,8 +285,28 @@ tr:hover td { background: var(--surface2); }
   .nav-brand { font-size: 13px; margin-right: 4px; }
   .nav-link { padding: 5px 8px; font-size: 11px; }
   .page-header h1 { font-size: 20px; }
-  .kasir-layout { flex-direction: column !important; }
+
+  /* FIX KASIR */
+  .kasir-layout {
+    grid-template-columns: 1fr !important;
+  }
   .payment-panel { position: static !important; }
+
+  /* FIX DASHBOARD */
+  .stat-grid + div {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* FIX FLEX-BETWEEN di header */
+  .flex-between {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   .modal { width: 95%; padding: 20px; }
   .stat-value { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .stat-grid { grid-template-columns: 1fr !important; }
 }
