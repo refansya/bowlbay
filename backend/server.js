@@ -6,7 +6,15 @@ const mongoose = require('mongoose');
 const app = express();
 
 // Middleware
-app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || origin.endsWith('.vercel.app') || origin === process.env.FRONTEND_URL) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}));
 app.use(express.json());
 
 // Routes
